@@ -14,13 +14,16 @@ public class WelcomePage {
 	@FindBy(linkText = "Login")
 	private WebElement loginLink;
 
-	@FindBy(xpath = "//div[text()='Fashion']")
+	@FindBy(xpath = "//a[text()='Cart']")
+	private WebElement cartLink;
+	
+	@FindBy(xpath = "//span[text()='Fashion']")
 	private WebElement FashionTab;
 
 	@FindBy(linkText = "Men's Kurtas")
 	private WebElement mensKurtaLink;
 
-	@FindBy(xpath = "//div[text()='Beauty, Toys & More']")
+	@FindBy(xpath = "//span[text()='Beauty, Toys & More']")
 	private WebElement beautyToysMoreTab;
 
 	@FindBy(xpath = "//a[text()='View All']")
@@ -29,7 +32,7 @@ public class WelcomePage {
 	@FindBy(xpath = "//input[@name='q']")
 	private WebElement searchTextField;
 	
-	@FindBy(xpath = "//button[@class='_2KpZ6l _2doB4z']")
+	@FindBy(xpath = "//span[contains(@class,'XB')]")
 	private WebElement crossButton;
 
 	public WebElement getLoginLink() {
@@ -58,6 +61,10 @@ public class WelcomePage {
 
 	public WebElement getCrossButton() {
 		return crossButton;
+	}
+
+	public WebElement getCartLink() {
+		return cartLink;
 	}
 	
 }
